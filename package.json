@@ -1,5 +1,5 @@
 {
-  "name": "@bitsler/pm2-redis",
+  "name": "bitsler-pm2-redis",
   "version": "2.1.1",
   "description": "PM2 Module to monitor redis",
   "main": "app.js",
@@ -20,7 +20,7 @@
   },
   "apps": [
     {
-      "name": "pm2-redis",
+      "name": "bitsler-pm2-redis",
       "script": "app.js"
     }
   ],
