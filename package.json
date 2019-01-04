@@ -17,7 +17,7 @@
   },
   "apps": [
     {
-      "name": "bitsler/pm2-redis",
+      "name": "pm2-redis",
       "script": "app.js"
     }
   ],
