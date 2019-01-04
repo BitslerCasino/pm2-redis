@@ -1,23 +1,23 @@
 {
-  "name": "pm2-redis",
+  "name": "@bitsler/pm2-redis",
   "version": "2.1.0",
   "description": "PM2 Module to monitor redis",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pm2-hive/pm2-redis.git"
+    "url": "https://github.com/BitslerCasino/pm2-redis.git"
   },
   "bugs": {
-    "url": "https://github.com/pm2-hive/pm2-redis/issues"
+    "url": "https://github.com/BitslerCasino/pm2-redis/issues"
   },
-  "homepage": "https://github.com/pm2-hive/pm2-redis",
+  "homepage": "https://github.com/BitslerCasino/pm2-redis",
   "dependencies": {
     "@pm2/io": "^2.4.7",
     "redis": "*"
   },
   "apps": [
     {
-      "name": "pm2-redis",
+      "name": "bitsler/pm2-redis",
       "script": "app.js"
     }
   ],
