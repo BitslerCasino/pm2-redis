@@ -3,13 +3,15 @@
  * Use of this source code is governed by a license that
  * can be found in the LICENSE file.
  */
-
-const pmx = require('@pm2/io');
+require('./apm');
+const {initModule} = require('@pm2/io');
 const redis = require('redis');
 const metricsMod = require('./lib/metrics.js');
 const actionsMod = require('./lib/actions.js');
+const pm2home = process.env.PM2_HOME || process.env.HOME + '/.pm2'
+const moduleConf = require(pm2home + '/module_conf.json');
 
-pmx.initModule({
+const conf = initModule({
   widget: {
     type: 'generic',
     logo: 'https://raw.githubusercontent.com/pm2-hive/pm2-redis/master/pres/redis-white.png',
@@ -37,10 +39,11 @@ pmx.initModule({
     io.notifyError(err)
     return process.exit(1)
   }
-  const WORKER_INTERVAL = (conf.workerInterval * 1000) || 2000;
-  const REDIS_PORT = process.env.PM2_REDIS_PORT || conf.port;
-  const REDIS_IP = process.env.PM2_REDIS_IP || conf.ip;
-  const REDIS_PWD = process.env.PM2_REDIS_PWD || conf.password;
+  const config = moduleConf['bitsler-pm2-redis']
+  const WORKER_INTERVAL = (config.workerInterval * 1000) || 2000;
+  const REDIS_PORT = process.env.PM2_REDIS_PORT || config.port;
+  const REDIS_IP = process.env.PM2_REDIS_IP || config.ip;
+  const REDIS_PWD = process.env.PM2_REDIS_PWD || config.password;
 
   client = redis.createClient(REDIS_PORT, REDIS_IP, {});
 

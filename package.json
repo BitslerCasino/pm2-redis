@@ -1,11 +1,8 @@
 {
   "name": "bitsler-pm2-redis",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "PM2 Module to monitor redis",
   "main": "app.js",
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/BitslerCasino/pm2-redis.git"
@@ -17,6 +14,9 @@
   "dependencies": {
     "@pm2/io": "^2.4.7",
     "redis": "*"
+  },
+  "scripts": {
+    "start":"node ./app.js"
   },
   "apps": [
     {
@@ -30,6 +30,6 @@
     "password": "",
     "workerInterval": 2
   },
-  "author": "vmarchaud",
+  "author": "unibtc",
   "license": "MIT"
 }
