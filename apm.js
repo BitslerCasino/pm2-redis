@@ -16,7 +16,7 @@ const io = require('@pm2/io').init({ // eslint-disable-line
   standalone: true,
   publicKey: process.env.KM_PUBLIC_KEY,
   secretKey: process.env.KM_SECRET_KEY,
-  appName: 'pm2-redis',
+  appName: 'bitsler-pm2-redis',
   serverName: generateUniqueId(),
   sendLogs: true,
   profiling: true,

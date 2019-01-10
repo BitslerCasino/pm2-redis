@@ -1,6 +1,6 @@
 {
   "name": "bitsler-pm2-redis",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "PM2 Module to monitor redis",
   "main": "app.js",
   "publishConfig": {

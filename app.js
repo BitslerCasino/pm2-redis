@@ -33,7 +33,10 @@ pmx.initModule({
     }
   }
 }, (err, conf) => {
-  if (err) console.error(err.stack || err.message);
+  if (err) {
+    io.notifyError(err)
+    return process.exit(1)
+  }
   const WORKER_INTERVAL = (conf.workerInterval * 1000) || 2000;
   const REDIS_PORT = process.env.PM2_REDIS_PORT || conf.port;
   const REDIS_IP = process.env.PM2_REDIS_IP || conf.ip;

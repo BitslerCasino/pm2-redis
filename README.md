@@ -4,7 +4,7 @@ PM2 module to monitor a Redis server with Keymetrics
 
 ## Install
 
-`pm2 install pm2-redis`
+`pm2 install bitsler-pm2-redis`
 
 ## Configure
 
@@ -16,13 +16,13 @@ PM2 module to monitor a Redis server with Keymetrics
 #### How to set these values ?
 
  After having installed the module you have to type :
-`pm2 set pm2-redis: `
+`pm2 set bitsler-pm2-redis: `
 
-e.g: 
-- `pm2 set pm2-redis:workerInterval 5` (every 5 seconds)
-- `pm2 set pm2-redis:ip 42.42.42.42` (ip of my redis server)
-- `pm2 set pm2-redis:password "bestpassword"` (the password will be used to connect to redis)
+e.g:
+- `pm2 set bitsler-pm2-redis:workerInterval 5` (every 5 seconds)
+- `pm2 set bitsler-pm2-redis:ip 42.42.42.42` (ip of my redis server)
+- `pm2 set bitsler-pm2-redis:password "bestpassword"` (the password will be used to connect to redis)
 
 ## Uninstall
 
-`pm2 uninstall pm2-redis`
+`pm2 uninstall bitsler-pm2-redis`
